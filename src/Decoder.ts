@@ -279,7 +279,7 @@ export const at = <A>(
     let idx = 0;
     while (idx < path.length) {
       val = val[path[idx]];
-      if (val === undefined) {
+      if (val == null) {
         const pathStr = stringify(path.slice(0, idx + 1));
         const valueStr = stringify(value);
         return err(
